@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+
+/*초기화*/
+* { margin:0; padding:0; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:0; vertical-align:middle; }
+body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; }
+
+header { position:fixed; top:0; left:0; width:100%; background:rgba(0,0,0,0.4); height:80px; z-index:1000; }
+#header_in { width:1440px; margin:auto; position:relative; }
+
+header h1 { width:172px; height:47px; padding-top:10px;}
+header h1 a { display:block; width:172px; height:47px; text-indent:-9999px; }
+header #nav { position:absolute; right:0; top:0; }
+header #nav li { float:left; padding:0 25px; line-height:80px; }
+header #nav a { color:#ffffff; font-size:18px; }
+header #nav a.on { text-decoration:underline; }
+
+
+section { height:100vh; position:relative; } /* 섹션의 세로길이는 브라우저 세로길와 딱 맞게 된다 */
+
+#section01 { overflow:hidden; }
+#section01 > div {}
+#section01 .video { overflow:hidden; }
+#section01 #myVideo { 
+    position: absolute; top:0; left:0; width:100%; height:100%;
+    background:#000;
+    object-fit:cover;   /* video 요소같은 콘텐츠 크기를 어떤 방식으로 조절해서 부모 요소 크기에 맞출지 지정 fill/cover/contain */
+}
+
+#section01 .txt { position:absolute; top:37%; margin-left:13%; z-index:900; color:#fff; }
+#section01 .txt h3 { position:relative; font-family:Georgia, 'Times New Roman', Times, serif; font-size:4vw; transition:1s; }
+#section01 .txt h3 span { font-size:6vw; transition:1s; }
+#section01 .txt p { position:relative; font-size:1.5vw; opacity:0; margin-top:2vw; transition:1s; }
+
+#section02 { position:relative; background:#fff9f4; }
+
+#section02 .s02_in { position:absolute; width:80%; height:70%; margin:10% 0 0 13%; }
+
+#section02 .txt { width:100%; }
+#section02 .txt h4 { position:relative; max-width:25%; }
+#section02 .txt h4 img { max-width:100%; }
+#section02 .txt .h4_u { font-family:Georgia, 'Times New Roman', Times, serif; display:inline-block; font-weight:bold; position:relative; font-size:2.8vw; margin-top:15px; }
+
+#section02 .txt .desc { position:relative; margin-top:60px; }
+#section02 .txt .desc_title { font-size:0.95vw; margin-bottom:15px; font-weight:bold; }
+#section02 .txt .desc_d { font-size:0.95vw; margin-top:10px; }
+
+#section02 .txt .descImg { position:relative; margin-top:60px; }
+#section02 .txt .descImg ul {}
+#section02 .txt .descImg ul:after { display:block; content:''; clear:both;}
+#section02 .txt .descImg li { float:left; width:25%; }
+#section02 .txt .descImg li div { padding-top:40px; }
+#section02 .txt .descImg li div:before { display:block; content:''; width:90px; height:90px; background:url('../img/mc_eff_m.png') no-repeat 0 0/cover ; }
+
+#section02 .txt .descImg li:nth-child(2) div:before { background-position:0 -90px; }
+#section02 .txt .descImg li:nth-child(3) div:before { background-position:0 -180px; }
+#section02 .txt .descImg li:nth-child(4) div:before { background-position:0 -270px; }
+
+#section02 div { line-height:30px; }
+#section02 .top strong { padding-right:15px; }
+#section02 .top .spacing { padding-left:30px; }
+#section02 .desc_d span { text-align:left; font-size:20px; line-height:44px; display:block; margin:10px 0 20px 0; padding-left:10px; background:rgba(0,0,0,0.2); height:44px; width:0; }
+
+#section03, #section05  { position:relative; background:rgba(0,0,0,0.2); }
+#section04 { position:relative; background:rgba(0,0,0,0.2) }
+
+#section03:before { display:block; content:""; position:absolute; left:0; width:50%; height:100%; background:url('../img/kua.jpg') no-repeat 5%; }
+#section04:before { display:block; content:""; position:absolute; right:0; width:50%; height:100%; background:url('../img/olympiad.jpg') no-repeat 50%; }
+#section05:before { display:block; content:""; position:absolute; left:0; width:50%; height:100%; background:url('../img/amazon.jpg') no-repeat 40%; }
+
+
+#section03 .s03_in { display:table-cell; vertical-align:middle; width:10%; height:auto; padding-left:60%; }
+
+
+#section03 .txt { width:100%; padding-top:30%; }
+#section03 .txt h4 { position:relative; font-family:Georgia, 'Times New Roman', Times, serif; font-weight:lighter; font-size:2.0vw; margin-bottom:20px; }
+#section03 .txt h3 { position:relative; font-family: 'Noto Sans KR', sans-serif; font-weight:lighter; font-size:3.5vw; transition:1s; }
+#section03 .txt .desc { position:relative; z-index:999; }
+#section03 .txt .desc_title { font-family:Georgia, 'Times New Roman', Times, serif; margin-top:2vw; }
+#section03 .txt p { position:relative; font-size:1.0vw; margin-top:1.8vw; transition:1s;}
+
+
+#section03 .buttons { margin-top:5vh;}
+#section03 .buttons a { position:relative; height:50px; line-height:50px; display:inline-block; padding:0 60px 0 23px; border:3px solid #000; border-radius:100px; color:#000; }
+#section03 .buttons span { font-size:1.3vw;}
+#section03 .buttons span:before { display:block; position:absolute; top:50%; right:25px; content:''; width:20px; height:1px; background:#000; }
+#section03 .buttons span:after { display:block; position:absolute; top:50%; right:26px; content:''; width:7px; height:7px; border:1px solid#000; border-left:0; border-bottom:0; transform:translateY(calc(-50% + 1px)) rotate(45deg);}
+
+#section04 .s04_in { display:table-cell; vertical-align:middle; width:10%; height:auto; padding-left:10%; }
+
+#section04 .txt { width:100%; padding-top:15%; }
+#section04 .txt h4 { position:relative; font-family:Georgia, 'Times New Roman', Times, serif; font-weight:lighter; font-size:2.0vw; margin-bottom:20px; }
+#section04 .txt h3 { position:relative; font-family: 'Noto Sans KR', sans-serif; font-weight:lighter; font-size:3.5vw; transition:1s; }
+#section04 .txt .desc { position:relative; z-index:999; }
+#section04 .txt .desc_title { font-family:Georgia, 'Times New Roman', Times, serif; margin-top:2vw; }
+#section04 .txt p { position:relative; font-size:1.0vw; margin-top:1.8vw; transition:1s;}
+
+
+#section04 .buttons { margin-top:5vh;}
+#section04 .buttons a { position:relative; height:50px; line-height:50px; display:inline-block; padding:0 60px 0 23px; border:3px solid #000; border-radius:100px; color:#000; }
+#section04 .buttons span { font-size:1.3vw;}
+#section04 .buttons span:before { display:block; position:absolute; top:50%; right:25px; content:''; width:20px; height:1px; background:#000; }
+#section04 .buttons span:after { display:block; position:absolute; top:50%; right:26px; content:''; width:7px; height:7px; border:1px solid#000; border-left:0; border-bottom:0; transform:translateY(calc(-50% + 1px)) rotate(45deg);}
+
+
+#section05 .s05_in { display:table-cell; vertical-align:middle; width:10%; height:auto; padding-left:60%; }
+
+#section05 .txt { width:100%; padding-top:30%; }
+#section05 .txt h4 { position:relative; font-family:Georgia, 'Times New Roman', Times, serif; font-weight:lighter; font-size:2.0vw; margin-bottom:20px; }
+#section05 .txt h3 { position:relative; font-family: 'Noto Sans KR', sans-serif; font-weight:lighter; font-size:3.5vw; transition:1s; }
+#section05 .txt .desc { position:relative; z-index:999; }
+#section05 .txt .desc_title { font-family:Georgia, 'Times New Roman', Times, serif; margin-top:2vw; }
+#section05 .txt p { position:relative; font-size:1.0vw; margin-top:1.8vw; transition:1s;}
+
+#section05 .buttons { margin-top:5vh;}
+#section05 .buttons a { position:relative; height:50px; line-height:50px; display:inline-block; padding:0 60px 0 23px; border:3px solid #000; border-radius:100px; color:#000; }
+#section05 .buttons span { font-size:1.3vw;}
+#section05 .buttons span:before { display:block; position:absolute; top:50%; right:25px; content:''; width:20px; height:1px; background:#000; }
+#section05 .buttons span:after { display:block; position:absolute; top:50%; right:26px; content:''; width:7px; height:7px; border:1px solid#000; border-left:0; border-bottom:0; transform:translateY(calc(-50% + 1px)) rotate(45deg);}
+
+
+
+
+
+footer { background:rgba(0,0,0,0.4); height:50px; text-align:center; }
+footer button {  border:0; background:transparent; line-height:50px; cursor:pointer}
+
+
+
+@media (max-width:1024px) {
+
+    #header_in { width:464px; }
+    
+    header #nav { }
+    header #nav li { padding:0 25px; line-height:80px; }
+    header #nav a { color:#ffffff; font-size:15px; }
+    header #nav a.on { text-decoration:none; }
+
+
+
+    #section01 .txt { margin-left:13%; }
+    #section01 .txt h3 { font-size:40px; }
+    #section01 .txt h3 span { font-size:45px; } 
+    #section01 .txt p { font-size:15px; margin-top:20px; }
+
+
+    #section02 .txt .h4_u { margin-top:80px; font-size:5vw; }
+
+    #section02 .txt .desc { position:relative; margin-top:50px; }
+    #section02 .txt .desc_title { font-size:15px; }
+
+    #section02 div { font-size:13px; }
+    #section02 .top strong { font-size:15px; }
+
+
+    #section03:before { display:block; content:""; position:absolute; float:left; width:50%; background:url('../img/kua_m.jpg') no-repeat #e8e4e1 5%; }
+    #section04:before { display:block; content:""; position:absolute; float:right; width:50%; background:url('../img/olympiad_m.jpg') no-repeat#e8e4e1 50%; }
+    #section05:before { display:block; content:""; position:absolute; float:left; width:50%; background:url('../img/amazon_m.jpg') no-repeat #e8e4e1 25%; }
+
+
+    #section03 .txt { display:inline-block; width:100%; margin-top:130%; }
+    #section03 .txt h4 { font-size:3.0vw; margin-bottom:15px; }
+    #section03 .txt h3 { font-size:4.5vw; font-weight:bold; transition:1s; margin-bottom:25px; }
+    #section03 .txt .desc { font-size:0.5vw; }
+    #section03 .txt .desc_title { font-family:Georgia, 'Times New Roman', Times, serif; margin-top:2vw; }
+    #section03 .txt p { font-size:2.8vw; margin-top:1.8vw; }
+
+
+    #section03 .buttons { margin-top:20%; }
+    #section03 .buttons a { height:30px; line-height:25px; display:inline-block; padding:0 50px 0 23px; border:3px solid #000; border-radius:100px; color:#000; }
+
+
+    #section04 .txt { display:block; width:40%; margin-top:50%; }
+    #section04 .txt h4 { font-size:3.0vw; margin-bottom:15px; }
+    #section04 .txt h3 { font-size:4.5vw; font-weight:bold; transition:1s; margin-bottom:25px; }
+    #section04 .txt .desc { font-size:0.5vw; }
+    #section04 .txt .desc_title { font-family:Georgia, 'Times New Roman', Times, serif; margin-top:2vw; }
+    #section04 .txt p { font-size:2.8vw; margin-top:1.8vw; }
+
+
+    #section04 .buttons { margin-top:10%; }
+    #section04 .buttons a { height:30px; line-height:25px; display:inline-block; padding:0 50px 0 23px; border:3px solid #000; border-radius:100px; color:#000; }
+
+    #section05 .txt { display:inline-block; width:100%; margin-top:140%; }
+    #section05 .txt h4 { font-size:3.0vw; margin-bottom:15px; }
+    #section05 .txt h3 { font-size:4.5vw; font-weight:bold; margin-bottom:25px; }
+    #section05 .txt .desc { font-size:0.5vw; }
+    #section05 .txt .desc_title { font-family:Georgia, 'Times New Roman', Times, serif; margin-top:2vw; }
+    #section05 .txt p { font-size:2.8vw; margin-top:1.8vw; }
+
+
+    #section05 .buttons { margin-top:20%; }
+    #section05 .buttons a { height:30px; line-height:25px; display:inline-block; padding:0 50px 0 23px; border:3px solid #000; border-radius:100px; color:#000; }
+   
+
+    footer { background:rgba(0,0,0,0.4); text-align:center; }
+    footer button { line-height:50px; cursor:pointer; }
